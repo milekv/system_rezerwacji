@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Rezerwacji</title>
+</head>
+<body>
+    <h1>Lista Rezerwacji</h1>
+    <ul>
+        {% for reservation in reservations %}
+            <li>{{ reservation.name }}: {{ reservation.start_date }} - {{ reservation.end_date }} ({{ reservation.resource }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create_reservation') }}">Dodaj rezerwację</a>
+</body>
+</html>
