@@ -1,9 +1,9 @@
-name: Package PyPI
+name: Publish Package to PyPI
 
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.8'  # lub inna wersja Pythona
 
     - name: Install dependencies
       run: |
