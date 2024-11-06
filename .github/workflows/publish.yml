@@ -3,20 +3,20 @@ name: Publish Package to PyPI
 on:
   push:
     branches:
-      - main  
+      - main  # lub master, w zależności od Twojego głównego branchu
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3  
+    - name: Checkout code
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v4  
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.8'  
+        python-version: '3.8'  # lub inna wersja Python, którą używasz
 
     - name: Install dependencies
       run: |
