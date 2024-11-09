@@ -3,7 +3,7 @@ name: Publish Package to PyPI
 on:
   push:
     branches:
-      - main  # lub master, w zależności od Twojego głównego branchu
+      - main  
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'  # lub inna wersja Python, którą używasz
+        python-version: '3.8'  
 
     - name: Install dependencies
       run: |
